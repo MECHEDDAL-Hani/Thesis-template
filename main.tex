@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{parskip}
 \usepackage{indentfirst}
+\usepackage[Bjornstrup]{fncychap}
+\usepackage{fancyhdr, lastpage}
 
 % ! Delete This Package 
 % * This Package used for generated random text 
@@ -22,7 +24,31 @@
     top=25mm,
     }
 
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+  \lhead{\ifnum\value{chapter}>0 \chaptername \ - \thechapter. \fi}
+  \rhead{\leftmark}
+  \cfoot{ - \thepage\ -}
+
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
+
+  \fancypagestyle{plain}{
+  \lhead{}
+  \rhead{}
+  \renewcommand{\headrulewidth}{0pt}
+  \cfoot{ - \thepage\ -}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
+  }
+
+  \setlength{\headheight}{14.5pt}
+
+
 \begin{document}
 \include{chapters/00.title_page.tex}
 \include{chapters/01.acknowledgements.tex}
+
 \end{document}
