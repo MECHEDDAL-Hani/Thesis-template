@@ -1,3 +1,78 @@
 \chapter{Title Chapter One}
-% ! TODO: Delete this line
-\lipsum[1-10]
+% TODO: edit all this file
+
+\section{Title section}
+
+Here we've done some examples of tables.
+
+\subsection{Table One}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|lllll|}
+    \toprule
+    A  & B  & C  & D  & E  \\
+    \midrule
+    A1 & B1 & C1 & D1 & E1 \\
+    A2 & B2 & C2 & D2 & E2 \\
+    A3 & B3 & C3 & D3 & E3 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Table One}
+\end{table}
+
+\subsection{Table Two}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|r|}
+    \hline
+    Item 11 & Item 12 & Item 13 \\
+    \hline
+    Item 21 & Item 22 & Item 23 \\
+    \hline
+  \end{tabular}
+  \caption{Table Two}
+\end{table}
+
+\subsection{Table Three}
+
+\begin{table}[h]
+  \centering
+  \label{tab:table3}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Value 1}                            & \textbf{Value 2} & \textbf{Value 3}    \\
+    \hline
+    $\alpha$                                    & $\beta$          & $\gamma$            \\
+    \hline
+    \multicolumn{2}{|c|}{\multirow{2}{*}{1234}} & a                                      \\
+    \cline{3-3}
+    \multicolumn{2}{|c|}{}                      & b                                      \\
+    \hline
+    3                                           & 23.113231        & \multirow{2}{*}{c~} \\
+    \cline{1-2}
+    4                                           & 25.113231        &                     \\
+    \hline
+  \end{tabular}
+  \caption{Table three}
+\end{table}
+
+\subsection{Table Four}
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \hline
+    1  & Eldon Base        & 3   & 35    & Storage \& Organization        & 0.8  \\ \hline
+    2  & 1.7 Cubic Foot    & 293 & 68.02 & Appliances                     & 0.58 \\ \hline
+    3  & Cardinal Slant-D  & 293 & 2.99  & Binders and Binder Accessories & 0.39 \\ \hline
+    4  & R380              & 483 & 3.99  & Telephones and Communication   & 0.58 \\ \hline
+    5  & Holmes HEPA       & 515 & 5.94  & Appliances                     & 0.5  \\ \hline
+    6  & G.E. Longer-Life  & 515 & 4.95  & Office Furnishings             & 0.37 \\ \hline
+    7  & Angle-D Binderss  & 613 & 7.72  & Binders and Binder Accessories & 0.38 \\ \hline
+    8  & SAFCO Mobile Desk & 613 & 6.22  & Storage \& Organization        & ~    \\ \hline
+    9  & SAFCO Commercial  & 643 & 35    & Storage \& Organization        & ~    \\ \hline
+    10 & Xerox 198         & 678 & 8.33  & Paper                          & 0.38 \\ \hline
+  \end{tabular}
+  \caption{Table Four}
+  \label{Table Four}
+\end{table}
