@@ -1,0 +1,109 @@
+\documentclass[a4paper,12pt,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{parskip}
+\usepackage{indentfirst}
+\usepackage[Bjornstrup]{fncychap}
+\usepackage{fancyhdr, lastpage}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage[acronym, automake]{glossaries-extra}
+\usepackage[most]{tcolorbox}
+
+% ! Delete This Package 
+% * This Package used for generated random text 
+\usepackage{lipsum} 
+
+\graphicspath{ {./images/} }
+\setlength{\parindent}{0.5cm}
+
+\geometry{
+    a4paper,
+    left=30mm,
+    right= 25mm,
+    top=25mm,
+    }
+
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+  \lhead{\ifnum\value{chapter}>0 \chaptername \ - \thechapter \fi}
+  \rhead{\leftmark}
+  \cfoot{ - \thepage\ -}
+
+  \renewcommand{\headrulewidth}{2pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
+
+  \fancypagestyle{plain}{
+  \lhead{}
+  \rhead{}
+  \renewcommand{\headrulewidth}{0pt}
+  \cfoot{ - \thepage\ -}
+  \renewcommand{\footrulewidth}{2pt}
+  \renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
+  }
+
+  \setlength{\headheight}{14.5pt}
+
+  \usepackage{hyperref}
+  \hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=red,
+  }
+
+  \hypersetup{
+    pdftitle={your title here},
+    pdfsubject={Master Thesis},
+    pdfauthor={name of author one, name of author two},
+    pdfkeywords={one, two, three, four, five, six, seven, eight}
+}
+
+\pgfplotsset{compat=1.18}
+\setlength{\headheight}{25pt}
+\addtolength{\topmargin}{-11pt}
+
+\makeglossaries
+
+\begin{document}
+\include{frontmatter/acronyms.tex}
+
+
+
+\include{frontmatter/00.title_page.tex}
+\pagenumbering{roman}
+\include{frontmatter/01.abstract.eng.tex}
+\include{frontmatter/02.acknowledgements.tex}
+\tableofcontents
+\addcontentsline{toc}{section}{Contents}
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\setlength{\headheight}{25pt}
+\addtolength{\topmargin}{-11pt}
+\include{chapters/03.introduction.tex}
+\include{chapters/04.Chapter-01.tex}
+\include{chapters/05.Chapter-02.tex}
+\include{chapters/06.Chapter-03.tex}
+\include{frontmatter/07.conclusion-and-future-work.tex}
+
+\printglossary[type=\acronymtype]
+
+\bibliography{ref}
+\bibliographystyle{abbrv}
+
+\end{document}

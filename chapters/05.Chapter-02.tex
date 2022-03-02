@@ -1,0 +1,126 @@
+\chapter{Title Chapter Two}
+
+\section{List}
+\subsection{Unordered lists}
+\begin{itemize}
+  \item HTML
+  \item CSS
+  \item PHP
+\end{itemize}
+
+\subsection{Ordered lists}
+\begin{enumerate}
+  \item One.
+  \item Two.
+  \item Three.
+\end{enumerate}
+
+\section{Code Highlighting}
+This is code example for c++.
+\begin{figure}[!h]
+  \begin{lstlisting}[language=c++]
+    #include <iostream>
+    using namespace std;
+    int main() {
+      cout << "Hello world!!";
+      return 0;
+    }
+    \end{lstlisting}
+  \caption{Code Example}
+\end{figure}
+
+\section{Algorithm}
+
+\begin{algorithm}
+  \caption{Algorithm Example}\label{alg:cap}
+  \begin{algorithmic}
+    \Require $n \geq 0$
+    \Ensure $y = x^n$
+    \State $y \gets 1$
+    \State $X \gets x$
+    \State $N \gets n$
+    \While{$N \neq 0$}
+    \If{$N$ is even}
+    \State $X \gets X \times X$
+    \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+    \ElsIf{$N$ is odd}
+    \State $y \gets y \times X$
+    \State $N \gets N - 1$
+    \EndIf
+    \EndWhile
+  \end{algorithmic}
+\end{algorithm}
+
+\lipsum[1-1] \ref{alg:cap}.
+
+\section{Math Equation}
+
+The mass-energy equivalence is described by the famous equation
+
+\[E=mc^2\]
+
+Discovered in 1905 by Albert Einstein.
+In natural units ($c$ = 1), the formula expresses the identity
+
+\begin{equation}
+  E=mc^2
+\end{equation}
+
+\begin{displaymath}
+  \sqrt{x^2+1}
+\end{displaymath}
+
+
+\begin{displaymath}
+  \int_{a}^{b} f(x)dx = F(b) - F(a)
+\end{displaymath}
+
+\section{Math Matrix}
+\begin{itemize}
+  \item Example 1 :
+        \par
+        $\begin{matrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{matrix}$
+        \par
+  \item  Example 2 :
+        \par
+        $\begin{pmatrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{pmatrix}$
+        \par
+  \item  Example 3 :
+        \par
+        $\begin{bmatrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{bmatrix}$
+        \par
+  \item  Example 4 :
+        \par
+        $\begin{Bmatrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{Bmatrix}$
+        \par
+  \item  Example 5 :
+        \par
+        $\begin{vmatrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{vmatrix}$
+        \par
+  \item  Example 6 :
+        \par
+        $\begin{Vmatrix}
+            1 & 2 & 3 \\
+            a & b & c
+          \end{Vmatrix}$
+\end{itemize}
+
+\section{Footnotes}
+
+I'm writing to test commands.
+You can insert a footnote marker \footnotemark{} . \footnotetext{Here's the footnote.}
