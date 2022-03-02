@@ -16,6 +16,7 @@ For **VS Code** user. I recommend this extension [LaTeX Workshop](https://market
 
 * Title page.
 * Abstract page.
+* Abstract (Arabic) page.
 * Acknowledgements page.
 * Contents page.
 * List of Tables page.
@@ -31,5 +32,4 @@ For **VS Code** user. I recommend this extension [LaTeX Workshop](https://market
 * Math Matrix example.
 * Footnotes example.
 * Acronyms example.
-* Color box example.
 * Bibliography example.
