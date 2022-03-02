@@ -31,5 +31,4 @@ For **VS Code** user. I recommend this extension [LaTeX Workshop](https://market
 * Math Matrix example.
 * Footnotes example.
 * Acronyms example.
-* Color box example.
 * Bibliography example.
